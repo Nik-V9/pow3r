@@ -233,9 +233,9 @@ class DecoderBlockInject (Block):
         return x, y
 
 # modify croco
-import dust3r.utils.path_to_croco
-import models.blocks 
-models.blocks.Attention = Attention
-models.blocks.Block = Block
-models.blocks.CrossAttention = CrossAttention
-models.blocks.DecoderBlock = DecoderBlock
+import dust3r.utils.path_to_croco # noqa
+import croco.models.blocks # noqa
+croco.models.blocks.Attention = Attention
+croco.models.blocks.Block = Block
+croco.models.blocks.CrossAttention = CrossAttention
+croco.models.blocks.DecoderBlock = DecoderBlock
