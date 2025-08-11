@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pow3r"
+version = "0.1"
+description = "Pow3R"
+readme = "README.md"
+requires-python = ">=3.10.0"
+dependencies = [
+    "cython",
+    "pyaml",
+    "scikit-learn",
+    "open3d",
+    "viser",
+    "croco @ git+https://github.com/naver/croco.git@croco_module#egg=croco",
+    "dust3r @ git+https://github.com/naver/dust3r.git@dust3r_setup#egg=dust3r",
+]
+
+# Setuptools configuration
+[tool.setuptools]
+# Disable automatic package discovery to avoid conflicts
+packages = ["pow3r"]
+
+# Include package data
+[tool.setuptools.package-data]
+"pow3r" = ["**/*"]
